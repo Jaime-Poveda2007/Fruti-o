@@ -1,6 +1,14 @@
-import CartaStarbucks from "./Componentes/CARTA"
 
-function app() {
-    return <CartaStarbucks/>;
+import Navbar from "./Componentes/Navbar";
+import MenuPrincipal from "./Componentes/MenuPrincipal";
+
+function App() {
+  return (
+    <>
+      <Navbar />
+      <MenuPrincipal />
+    </>
+  );
 }
-export default app
+
+export default App;

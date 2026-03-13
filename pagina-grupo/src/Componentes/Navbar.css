@@ -1,0 +1,186 @@
+.navbar {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  height: 70px;
+  gap: 32px;
+}
+
+.navbar-logo img {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 8px;
+  flex: 1;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #1e1e1e;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 24px 12px;
+  display: block;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.navbar-links li a:hover,
+.navbar-links li a.activo {
+  color: #00704a;
+  border-bottom: 3px solid #00704a;
+}
+
+.navbar-acciones {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.navbar-tienda {
+  text-decoration: none;
+  color: #1e1e1e;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.navbar-tienda:hover {
+  color: #00704a;
+}
+
+.icono-ubicacion {
+  font-size: 16px;
+}
+
+.btn-registro {
+  background: #1e1e1e;
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.btn-registro:hover {
+  background: #00704a;
+}
+
+.btn-login {
+  background: transparent;
+  color: #1e1e1e;
+  border: 1.5px solid #1e1e1e;
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-login:hover {
+  border-color: #00704a;
+  color: #00704a;
+}
+
+.navbar-hamburguesa {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  margin-left: auto;
+}
+
+.navbar-hamburguesa span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #1e1e1e;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 12px 20px;
+  }
+
+  .navbar-hamburguesa {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    padding-bottom: 8px;
+  }
+
+  .navbar-links.abierto {
+    display: flex;
+  }
+
+  .navbar-links li a {
+    padding: 12px 4px;
+    border-bottom: none;
+    border-left: 3px solid transparent;
+  }
+
+  .navbar-links li a:hover,
+  .navbar-links li a.activo {
+    border-bottom: none;
+    border-left: 3px solid #00704a;
+    padding-left: 10px;
+  }
+
+  .navbar-acciones {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 10px;
+    padding-bottom: 12px;
+  }
+
+  .navbar-acciones.abierto {
+    display: flex;
+  }
+
+  .btn-registro,
+  .btn-login {
+    width: 100%;
+    text-align: center;
+  }
+}
